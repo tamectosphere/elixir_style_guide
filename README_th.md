@@ -1365,5 +1365,5 @@ project.
 [Russian]: https://github.com/sofialapteva/elixir_style_guide/blob/russian/README_ru.md
 [Sentence Spacing]: http://en.wikipedia.org/wiki/Sentence_spacing
 [Spanish]: https://github.com/iver/elixir_style_guide/blob/spanish/i18n/README_es.md
-[Thai]: https://github.com/tamectosphere/elixir_style_guide/blob/feat/thai-translation/README_THAI.md
+[Thai]: https://github.com/tamectosphere/elixir_style_guide/blob/feat/thai-translation/README_th.md
 [Stargazers]: https://github.com/christopheradams/elixir_style_guide/stargazers
