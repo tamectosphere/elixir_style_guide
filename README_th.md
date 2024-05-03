@@ -1,13 +1,13 @@
 # [The Elixir Style Guide][Elixir Style Guide]
 
-## Table of Contents
+## สารบัญ
 
 * __[บทนำ](#บทนำ)__
 * __[เกี่ยวกับ](#เกี่ยวกับ)__
-* __[Formatting](#formatting)__
-  * [Whitespace](#whitespace)
-  * [Indentation](#indentation)
-  * [Parentheses](#parentheses)
+* __[การจัดเรียง (Formatting)](#formatting)__
+  * [การเว้นช่องว่าง (whitespace)](#whitespace)
+  * [การย่อหน้า (Indentation)](#indentation)
+  * [การใส่วงเล็บ (Parentheses)](#parentheses)
 * __[The Guide](#the-guide)__
   * [Expressions](#expressions)
   * [Naming](#naming)
@@ -62,32 +62,28 @@
 * [Spanish] (สเปน) 
 * [Thai] (ไทย) 
 
-## Formatting
+<h2 id="formatting">การจัดเรียง (Formatting)</h2>
 
-Elixir v1.6 introduced a [Code Formatter] and [Mix format] task.
-The formatter should be preferred for all new projects and source code.
+Elixir ตั้งแต่เวอร์ชั่น 1.6 ขึ้นไป ได้นำ [Code Formatter] และ [Mix format] มาใช้ ซึ่งเราควรเอาตัว Formatter มาใช้ในทุกๆ project เช่นกัน
 
-The rules in this section are applied automatically by the code formatter, but
-are provided here as examples of the preferred style.
+นี่เป็นตัวอย่างรูปแบบที่ใช้กัน ซึ่งปกติแล้วตัว formatter มันจะทำให้เราอัตโนมัติอยู่แล้วครับ
 
-### Whitespace
+<h3 id="Whitespace">การเว้นช่องว่าง (whitespace)</h3>
 
 * <a name="trailing-whitespace"></a>
-  Avoid trailing whitespace.
+  หลีกเลี่ยงการเว้นช่องว่าง(whitespace) ที่ไม่จำเป็นไว้ในตอนท้ายบรรทัดในโค้ด
   <sup>[[link](#trailing-whitespace)]</sup>
 
 * <a name="newline-eof"></a>
-  End each file with a newline.
+  ตัดจบไฟล์ทุกไฟล์ด้วยการขึ้นบรรทัดใหม่.
   <sup>[[link](#newline-eof)]</sup>
 
 * <a name="line-endings"></a>
-  Use Unix-style line endings (\*BSD/Solaris/Linux/OSX users are covered by
-  default, Windows users have to be extra careful).
+  ใช้การจบบรรทัดแบบ Unix-style (ผู้ใช้ BSD/Solaris/Linux/OSX มีการตั้งค่านี้เป็นค่าเริ่มต้นอยู่แล้ว ส่วนผู้ใช้ Windows ควรต้องระวังเป็นพิเศษ)
   <sup>[[link](#line-endings)]</sup>
 
 * <a name="autocrlf"></a>
-  If you're using Git you might want to add the following configuration
-  setting to protect your project from Windows line endings creeping in:
+  ถ้าหากหากคุณกำลังใช้ Git อยู่ คุณอาจต้องการเพิ่มการตั้งค่า config นี้เพื่อป้องกันไม่ให้ Windows line endings แทรกเข้ามาในโปรเจกต์ของคุณ:
   <sup>[[link](#autocrlf)]</sup>
 
   ```sh
@@ -95,15 +91,11 @@ are provided here as examples of the preferred style.
   ```
 
 * <a name="line-length"></a>
-  Limit lines to 98 characters.
-  Otherwise, set the `:line_length` option in your `.formatter.exs` file.
+ จำกัดความยาวของแต่ละบรรทัดไม่เกิน 98 ตัวอักษร หากต้องการกำหนดค่าตัวอักษรที่แตกต่างจากนี้ ให้ตั้งค่า `:line_length` ในไฟล์ `.formatter.exs` ของคุณ
   <sup>[[link](#line-length)]</sup>
 
 * <a name="spaces"></a>
-  Use spaces around operators, after commas, colons and semicolons.
-  Do not put spaces around matched pairs like brackets, parentheses, etc.
-  Whitespace might be (mostly) irrelevant to the Elixir runtime, but its proper
-  use is the key to writing easily readable code.
+  ใช้ช่องว่างรอบๆ ตัว operators, หลังจาก commas, colons, และ semicolons อย่าใส่ช่องว่างรอบๆ พวกคู่วงเล็บ, วงเล็บเหลี่ยม หรืออื่นๆ แม้ว่า whitespace อาจไม่สำคัญมากสำหรับรันไทม์ของ Elixir แต่การใช้งานอย่างถูกต้องเป็นกุญแจสำคัญในการเขียนโค้ดที่อ่านง่าย
   <sup>[[link](#spaces)]</sup>
 
   ```elixir
@@ -114,8 +106,7 @@ are provided here as examples of the preferred style.
   ```
 
 * <a name="no-spaces"></a>
-  Do not use spaces after non-word operators that only take one argument; or
-  around the range operator.
+  อย่าใช้ช่องว่างหลังจาก non-word operators ที่รับค่าจริงเพียงหนึ่งตัว; หรือรอบ ๆ range operator
   <sup>[[link](#no-spaces)]</sup>
 
   ```elixir
@@ -125,8 +116,7 @@ are provided here as examples of the preferred style.
   ```
 
 * <a name="def-spacing"></a>
-  Use blank lines between `def`s to break up a function into logical
-  paragraphs.
+  ใช้บรรทัดว่างระหว่าง `def` เพื่อแบ่งฟังก์ชันออกเป็นส่วนๆตาม logic
   <sup>[[link](#def-spacing)]</sup>
 
   ```elixir
@@ -152,12 +142,11 @@ are provided here as examples of the preferred style.
   ```
 
 * <a name="defmodule-spacing"></a>
-  Don't put a blank line after `defmodule`.
+  อย่าใส่บรรทัดว่างหลังจาก `defmodule`
   <sup>[[link](#defmodule-spacing)]</sup>
 
 * <a name="long-dos"></a>
-  If the function head and `do:` clause are too long to fit on the same line, put
-  `do:` on a new line, indented one level more than the previous line.
+  หากหัวของ function และ `do:` clause ยาวเกินกว่าจะอยู่ในบรรทัดเดียวกันได้ ให้วาง `do:` ไว้ในบรรทัดใหม่ โดยเว้นย่อหน้าเพิ่มขึ้นหนึ่งระดับจากบรรทัดก่อนหน้า
   <sup>[[link](#long-dos)]</sup>
 
   ```elixir
@@ -165,16 +154,15 @@ are provided here as examples of the preferred style.
     do: Enum.map(args, fn arg -> arg <> " is on a very long line!" end)
   ```
 
-  When the `do:` clause starts on its own line, treat it as a multiline
-  function by separating it with blank lines.
+  เมื่อ `do:` clause เริ่มต้นบนบรรทัดของตัวเอง ควรจัดการมันเหมือนกับ function ที่มีหลายบรรทัด โดยการแยกมันด้วยการใช้บรรทัดว่าง
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   def some_function([]), do: :empty
   def some_function(_),
     do: :very_long_line_here
 
-  # preferred
+  # แนะนำ
   def some_function([]), do: :empty
 
   def some_function(_),
@@ -182,19 +170,18 @@ are provided here as examples of the preferred style.
   ```
 
 * <a name="add-blank-line-after-multiline-assignment"></a>
-  Add a blank line after a multiline assignment as a
-  visual cue that the assignment is 'over'.
+  เพิ่มบรรทัดว่างหลังจากการกำหนดค่าตัวแปรที่ต้องทำหลายบรรทัด เพื่อให้เป็นตัวบอกว่าการกำหนดค่าให้กับตัวแปรนั้น ‘เสร็จสิ้น’ แล้ว
   <sup>[[link](#add-blank-line-after-multiline-assignment)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   some_string =
     "Hello"
     |> String.downcase()
     |> String.trim()
   another_string <> some_string
 
-  # preferred
+  # แนะนำ
   some_string =
     "Hello"
     |> String.downcase()
@@ -204,7 +191,7 @@ are provided here as examples of the preferred style.
   ```
 
   ```elixir
-  # also not preferred
+  # ไม่แนะนำเช่นกัน
   something =
     if x == 2 do
       "Hi"
@@ -213,7 +200,7 @@ are provided here as examples of the preferred style.
     end
   String.downcase(something)
 
-  # preferred
+  # แนะนำ
   something =
     if x == 2 do
       "Hi"
@@ -224,18 +211,17 @@ are provided here as examples of the preferred style.
   String.downcase(something)
   ```
 
-* <a name="multiline-enums"></a>
-  If a list, map, or struct spans multiple lines, put each element, as well as
-  the opening and closing brackets, on its own line.
-  Indent each element one level, but not the brackets.
+* <a name="multiline-enums"></a>  
+  
+  ถ้าเป็น list, map, หรือ struct ที่สามารถขยายออกมาเป็นหลายบรรทัด ให้วางแต่ละ element รวมถึงวงเล็บเปิดและปิดในบรรทัดของตัวเอง ขยับแต่ละ element ให้มีการเยื้องหนึ่งระดับโดยไม่เยื้องกับวงเล็บ
   <sup>[[link](#multiline-enums)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   [:first_item, :second_item, :next_item,
   :final_item]
 
-  # preferred
+  # แนะนำ
   [
     :first_item,
     :second_item,
@@ -245,19 +231,18 @@ are provided here as examples of the preferred style.
   ```
 
 * <a name="multiline-list-assign"></a>
-  When assigning a list, map, or struct, keep the opening bracket on the same
-  line as the assignment.
+  เมื่อต้องกำหนดให้กลับตัวแปรที่เป็น list, map, หรือ struct ควรให้วงเล็บเปิดอยู่ที่บรรทัดเดียวกันกับที่ตัวแปรถูกประกาศ
   <sup>[[link](#multiline-list-assign)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   list =
   [
     :first_item,
     :second_item
   ]
 
-  # preferred
+  # แนะนำ
   list = [
     :first_item,
     :second_item
@@ -265,19 +250,18 @@ are provided here as examples of the preferred style.
   ```
 
 * <a name="multiline-case-clauses"></a>
-  If any `case` or `cond` clause needs more than one line (due to line length,
-  multiple expressions in the clause body, etc.), use multi-line syntax for all
-  clauses, and separate each one with a blank line.
+
+  ถ้าเวลาเขียน `case` หรือ `cond` clause ต้องการมากกว่าหนึ่งบรรทัด (เนื่องจากความยาวของบรรทัด, expressions หลายตัวหรืออื่นๆ) ให้ใช้ multi-line syntax สำหรับ clause ทั้งหมด และแยกแต่ละ clause ด้วยบรรทัดว่าง
   <sup>[[link](#multiline-case-clauses)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   case arg do
     true -> IO.puts("ok"); :ok
     false -> :error
   end
 
-  # not preferred
+  # ไม่แนะนำ
   case arg do
     true ->
       IO.puts("ok")
@@ -285,7 +269,7 @@ are provided here as examples of the preferred style.
     false -> :error
   end
 
-  # preferred
+  # แนะนำ
   case arg do
     true ->
       IO.puts("ok")
@@ -297,34 +281,34 @@ are provided here as examples of the preferred style.
   ```
 
 * <a name="comments-above-line"></a>
-  Place comments above the line they comment on.
+  
+  ให้ใส่ comment ไว้ด้านบนของบรรทัดที่เกี่ยวข้องเสมอ
   <sup>[[link](#comments-above-line)]</sup>
 
   ```elixir
-  String.first(some_string) # not preferred
+  String.first(some_string) # ไม่แนะนำ
 
-  # preferred
+  # แนะนำ
   String.first(some_string)
   ```
 
 * <a name="comment-leading-spaces"></a>
-  Use one space between the leading `#` character of the comment and the text of
-  the comment.
+
+  เวลาเขียน comment หลังจากที่พิมพ์ `#` แล้ว ให้เว้นช่องว่างไว้หนึ่งช่องแล้วจึงค่อยใส่ข้อความตามมา 
   <sup>[[link](#comment-leading-spaces)]</sup>
 
   ```elixir
-  #not preferred
+  #ไม่แนะนำให้เขียนข้อความติดกับตัว `#`
   String.first(some_string)
 
-  # preferred
+  # แนะนำ
   String.first(some_string)
   ```
 
-### Indentation
+<h3 id="indentation">การย่อหน้า (Indentation)</h3>
 
 * <a name="with-clauses"></a>
-  Indent and align successive `with` clauses.
-  Put the `do:` argument on a new line, aligned with the previous clauses.
+  ย่อหน้าและจัดแนวของ `with` clauses ที่ต่อเนื่องกัน ควรวาง argument ของ `do:` บนบรรทัดใหม่ จัดแนวให้ตรงกับ clauses ก่อนหน้านี้
   <sup>[[link](#with-clauses)]</sup>
 
   ```elixir
@@ -334,8 +318,8 @@ are provided here as examples of the preferred style.
   ```
 
 * <a name="with-else"></a>
-  If the `with` expression has a `do` block with more than one line, or has an
-  `else` option, use multiline syntax.
+
+  ถ้าหาก `with` expression มี `do` ที่มีมากกว่าหนึ่งบรรทัด หรือมีตัวเลือก else ให้ใช้ multiline syntax
   <sup>[[link](#with-else)]</sup>
 
   ```elixir
@@ -348,59 +332,59 @@ are provided here as examples of the preferred style.
   end
   ```
 
-### Parentheses
+<h3 id="parentheses">การใส่วงเล็บ (Parentheses)</h3>
 
 * <a name="parentheses-pipe-operator"></a>
-  Use parentheses for one-arity functions when using the pipe operator (`|>`).
+  เมื่อใช้ pipe operator (`|>`) ให้ใส่วงเล็บสำหรับฟังก์ชันที่มีรับตัวแปร 1 ตัว 
   <sup>[[link](#parentheses-pipe-operator)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   some_string |> String.downcase |> String.trim
 
-  # preferred
+  # แนะนำ
   some_string |> String.downcase() |> String.trim()
   ```
 
 * <a name="function-names-with-parentheses"></a>
-  Never put a space between a function name and the opening parenthesis.
+  อย่าใส่ช่องว่างระหว่างชื่อฟังก์ชันและวงเล็บเปิด
   <sup>[[link](#function-names-with-parentheses)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   f (3 + 2)
 
-  # preferred
+  # แนะนำ
   f(3 + 2)
   ```
 
 * <a name="function-calls-and-parentheses"></a>
-  Use parentheses in function calls, especially inside a pipeline.
+  ใช้วงเล็บในการเรียกฟังก์ชัน โดยเฉพาะใน pipeline operator.
   <sup>[[link](#function-calls-and-parentheses)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   f 3
 
-  # preferred
+  # แนะนำ
   f(3)
 
-  # not preferred and parses as rem(2, (3 |> g)), which is not what you want.
+  # ไม่แนะนำ ตัวโปรแกรมจะเข้าผิดว่าเป็นฟังก์ชัน rem(2, (3 |> g)) แทน
   2 |> rem 3 |> g
 
-  # preferred
+  # แนะนำ
   2 |> rem(3) |> g()
   ```
 
 * <a name="keyword-list-brackets"></a>
-  Omit square brackets from keyword lists whenever they are optional.
+  ละเว้นการใส่ square brackets จาก keyword lists เมื่อไม่จำเป็นต้องใช้
   <sup>[[link](#keyword-list-brackets)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   some_function(foo, bar, [a: "baz", b: "qux"])
 
-  # preferred
+  # แนะนำ
   some_function(foo, bar, a: "baz", b: "qux")
   ```
 
