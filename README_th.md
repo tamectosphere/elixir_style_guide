@@ -8,30 +8,30 @@
   * [การเว้นช่องว่าง (whitespace)](#whitespace)
   * [การย่อหน้า (Indentation)](#indentation)
   * [การใส่วงเล็บ (Parentheses)](#parentheses)
-* __[The Guide](#the-guide)__
-  * [Expressions](#expressions)
-  * [Naming](#naming)
-  * [Comments](#comments)
-    * [Comment Annotations](#comment-annotations)
-  * [Modules](#modules)
-  * [Documentation](#documentation)
-  * [Typespecs](#typespecs)
-  * [Structs](#structs)
-  * [Exceptions](#exceptions)
-  * [Collections](#collections)
-  * [Strings](#strings)
-  * _Regular Expressions_
-  * [Metaprogramming](#metaprogramming)
-  * [Testing](#testing)
-* __[Resources](#resources)__
-  * [Alternative Style Guides](#alternative-style-guides)
-  * [Tools](#tools)
-* __[Getting Involved](#getting-involved)__
-  * [Contributing](#contributing)
-  * [Spread the Word](#spread-the-word)
-* __[Copying](#copying)__
-  * [License](#license)
-  * [Attribution](#attribution)
+* __[คู่มือ](#คู่มือ)__
+  * [นิพจน์ (Expressions)](#expressions)
+  * [การตั้งชื่อ (Naming)](#naming)
+  * [การใส่คอมเมนต์ (Comments)](#comments)
+    * [การใส่คำอธิบายประกอบ (Comments Annotations)](#comment-annotations)
+  * [โมดูล (Modules)](#modules)
+  * [การเขียนเอกสารกำกับโปรแกรม (Documentation)](#documentation)
+  * [การเขียนไทป์สเปค (Typespecs)](#typespecs)
+  * [สตรัค (Structs)](#structs)
+  * [การจัดการกับข้อผิดพลาด (Exceptions)](#exceptions)
+  * [คอลเลกชัน (Collections)](#collections)
+  * [สตริง (Strings)](#strings)
+  * _นิพจน์ปรกติ (Regular Expressions)_
+  * [เมต้าโปรแกรมมิ่ง (Metaprogramming)](#metaprogramming)
+  * [การทดสอบโปรแกรม (Testing)](#testing)
+* __[แหล่งที่มา (Resources)](#resources)__
+  * [คู่มืออื่นๆ (Alternative Style Guides)](#alternative-style-guides)
+  * [เครื่องมือ (Tools)](#tools)
+* __[เข้ามามีส่วนร่วมกับเรา](#getting-involved)__
+  * [การสนับสนุน (Contributing)](#contributing)
+  * [เผยแพร่ข่าวสาร (Spread the Word)](#spread-the-word)
+* __[การก๊อปปี้ (Copying)](#copying)__
+  * [ลิขสิทธิ์ (License)](#license)
+  * [การยกเครดิต (Attribution)](#attribution)
 
 ## บทนำ
 
@@ -40,11 +40,11 @@
 > —Frank Gehry
 
 รูปแบบของการเขียนโค้ดนั้นเป็นเรื่องสำคัญ เช่นเดียวกันกับ
-[Elixir] ที่ไม่มีรูปแบบของการเขียนที่ตายตัวแต่มันสามารถถูกจำกัดตามวิธีการใช้งานเหมือนกับ programming language อื่นๆ แต่อย่างไรก็อย่างเราไม่ควรที่จะให้ข้อจำกัดมากระทบต่อรูปแบบการเขียนของ Elixir
+[Elixir] ที่ไม่มีรูปแบบของการเขียนที่ตายตัวแต่มันสามารถถูกจำกัดตามวิธีการใช้งานเหมือนกับ programming language อื่นๆ แต่อย่างไรก็ตามเราไม่ควรที่จะให้ข้อจำกัดมากระทบต่อรูปแบบการเขียนของ Elixir
 
 ## เกี่ยวกับ
 
-นี่คือ community ที่ให้คำแนะนำสำหรับ [Elixir programming language][Elixir] ที่จัดทำโดยเพื่อนๆที่รักในการเขียน Elixir คุณสามารถ pull request เพื่อแนะนำหรือเปลี่ยนแปลงเพิ่มเติมได้ ขอเชิญร่วมมาเป็นส่วนหนึ่งของ Elixir community ด้วยกันครับ
+นี่คือ community ที่ให้คำแนะนำสำหรับ [Elixir programming language][Elixir] ที่จัดทำโดยเพื่อนๆที่รักในการเขียน Elixir คุณสามารถไปเปิด pull request เพื่อแนะนำหรือเปลี่ยนแปลงเพิ่มเติมได้ ขอเชิญร่วมมาเป็นส่วนหนึ่งของ Elixir community ด้วยกันครับ
 
 ถ้าคุณต้องการที่จะ contribute ให้กับ project อื่นๆ สามารถเข้าไปดูในนี้ได้ครับ
 [Hex package manager site][Hex].
@@ -231,7 +231,7 @@ Elixir ตั้งแต่เวอร์ชั่น 1.6 ขึ้นไป �
   ```
 
 * <a name="multiline-list-assign"></a>
-  เมื่อต้องกำหนดให้กลับตัวแปรที่เป็น list, map, หรือ struct ควรให้วงเล็บเปิดอยู่ที่บรรทัดเดียวกันกับที่ตัวแปรถูกประกาศ
+  เมื่อต้องกำหนดค่าให้กลับตัวแปรที่เป็น list, map, หรือ struct ควรให้วงเล็บเปิดอยู่ที่บรรทัดเดียวกันกับที่ตัวแปรถูกประกาศ
   <sup>[[link](#multiline-list-assign)]</sup>
 
   ```elixir
@@ -251,7 +251,7 @@ Elixir ตั้งแต่เวอร์ชั่น 1.6 ขึ้นไป �
 
 * <a name="multiline-case-clauses"></a>
 
-  ถ้าเวลาเขียน `case` หรือ `cond` clause ต้องการมากกว่าหนึ่งบรรทัด (เนื่องจากความยาวของบรรทัด, expressions หลายตัวหรืออื่นๆ) ให้ใช้ multi-line syntax สำหรับ clause ทั้งหมด และแยกแต่ละ clause ด้วยบรรทัดว่าง
+  เวลาเขียน `case` หรือ `cond` clause ถ้ามันมีมากกว่าหนึ่งบรรทัด (เนื่องจากความยาวของบรรทัด, expressions หลายตัวหรืออื่นๆ) ให้ใช้ multi-line syntax สำหรับ clause ทั้งหมด และแยกแต่ละ clause ด้วยบรรทัดว่าง
   <sup>[[link](#multiline-case-clauses)]</sup>
 
   ```elixir
@@ -388,16 +388,15 @@ Elixir ตั้งแต่เวอร์ชั่น 1.6 ขึ้นไป �
   some_function(foo, bar, a: "baz", b: "qux")
   ```
 
-## The Guide
+## คู่มือ
 
-The rules in this section may not be applied by the code formatter, but they are
-generally preferred practice.
+หลักการต่างๆในส่วนนี้อาจไม่ถูกใช้โดย code formatter แต่โดยทั่วไปแล้วเป็นสิ่งที่แนะนำ
 
-### Expressions
+<h3 id="expressions">นิพจน์ (Expressions)</h3>
 
 * <a name="single-line-defs"></a>
-  Run single-line `def`s that match for the same function together, but separate
-  multiline `def`s with a blank line.
+
+  ให้นำ `def` ที่รันแบบบรรทัดเดียวเอามาติดกันกับฟังก์ชันเดียวกัน ส่วน `def` ที่มีหลายบรรทัดให้แยกกันด้วยบรรทัดว่าง
   <sup>[[link](#single-line-defs)]</sup>
 
   ```elixir
@@ -410,7 +409,7 @@ generally preferred practice.
   ```
 
 * <a name="multiple-function-defs"></a>
-  If you have more than one multiline `def`, do not use single-line `def`s.
+  อย่าใช้ `def` แบบบรรทัดเดียว ถ้าหากคุณมี `def` แบบหลายบรรทัดมากกว่าหนึ่งตัว 
   <sup>[[link](#multiple-function-defs)]</sup>
 
   ```elixir
@@ -432,68 +431,69 @@ generally preferred practice.
   ```
 
 * <a name="pipe-operator"></a>
-  Use the pipe operator to chain functions together.
+  ใช้ pipe operator เพื่อเชื่อมฟังก์ชันเข้าด้วยกัน
   <sup>[[link](#pipe-operator)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   String.trim(String.downcase(some_string))
 
-  # preferred
+  # แนะนำ
   some_string |> String.downcase() |> String.trim()
 
-  # Multiline pipelines are not further indented
+  # Multiline pipelines ไม่ต้องย่อหน้าเพิ่ม
   some_string
   |> String.downcase()
   |> String.trim()
 
-  # Multiline pipelines on the right side of a pattern match
-  # should be indented on a new line
+  # Multiline pipelines อยู่ที่ข้างขวาของ pattern match
+  # ควรต้องย่อหน้าเมื่อขึ้นบรรทัดใหม่
   sanitized_string =
     some_string
     |> String.downcase()
     |> String.trim()
   ```
 
-  While this is the preferred method, take into account that copy-pasting
-  multiline pipelines into IEx might result in a syntax error, as IEx will
-  evaluate the first line without realizing that the next line has a pipeline.
-  To avoid this, you can wrap the pasted code in parentheses.
+  ถึงแม้ว่านี่จะเป็นวิธีที่แนะนำ แต่มันมีปัญหาเมื่อเราทำการคัดลอกและวาง multiline pipelines ลงใน IEx ซึ่งอาจจะทำให้เกิด syntax error เนื่องจาก IEx จะประมวลผลบรรทัดแรกโดยไม่รู้ว่าบรรทัดถัดไปมี pipeline อยู่ เพื่อหลีกเลี่ยงปัญหานี้ คุณสามารถใช้วิธีเอามฟังก์ชันใส่เอาไว้ในวงเล็บแทน ตัวอย่างเช่น
+
+   ```elixir
+  String.trim(String.downcase(some_string))
+  ```
 
 * <a name="avoid-single-pipelines"></a>
-  Avoid using the pipe operator just once.
+  หลีกเลี่ยงการใช้ pipe operator เพียงครั้งเดียว
   <sup>[[link](#avoid-single-pipelines)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   some_string |> String.downcase()
 
   System.version() |> Version.parse()
 
-  # preferred
+  # แนะนำ
   String.downcase(some_string)
 
   Version.parse(System.version())
   ```
 
 * <a name="bare-variables"></a>
-  Use _bare_ variables in the first part of a function chain.
+  ใช้ตัวแปรเพียวๆในส่วนแรกของ function chain
   <sup>[[link](#bare-variables)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   String.trim(some_string) |> String.downcase() |> String.codepoints()
 
-  # preferred
+  # แนะนำ
   some_string |> String.trim() |> String.downcase() |> String.codepoints()
   ```
 
 * <a name="fun-def-parentheses"></a>
-  Use parentheses when a `def` has arguments, and omit them when it doesn't.
+  ถ้า `def` รับ arguments มาให้ใส่วงเล็บ ถ้าไม่มีไม่ต้องใส่วงเล็บ
   <sup>[[link](#fun-def-parentheses)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   def some_function arg1, arg2 do
     # body omitted
   end
@@ -502,7 +502,7 @@ generally preferred practice.
     # body omitted
   end
 
-  # preferred
+  # แนะนำ
   def some_function(arg1, arg2) do
     # body omitted
   end
@@ -513,28 +513,27 @@ generally preferred practice.
   ```
 
 * <a name="do-with-single-line-if-unless"></a>
-  Use `do:` for single line `if/unless` statements.
+  ใช้ `do:` สำหรับ `if/unless` แบบบรรทัดเดียว
   <sup>[[link](#do-with-single-line-if-unless)]</sup>
 
   ```elixir
-  # preferred
-  if some_condition, do: # some_stuff
+  # แนะนำ
+  if some_condition, do: # ใส่ logic บางอย่าง ถ้าเข้าเงื่อนไขใน if
   ```
 
 * <a name="unless-with-else"></a>
-  Never use `unless` with `else`.
-  Rewrite these with the positive case first.
+  อย่าใช้ `unless` ร่วมกับ `else` ให้เขียนใหม่โดย `if` ก่อน
   <sup>[[link](#unless-with-else)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   unless success do
     IO.puts('failure')
   else
     IO.puts('success')
   end
 
-  # preferred
+  # แนะนำ
   if success do
     IO.puts('success')
   else
@@ -543,12 +542,11 @@ generally preferred practice.
   ```
 
 * <a name="true-as-last-condition"></a>
-  Use `true` as the last condition of the `cond` special form when you need a
-  clause that always matches.
+  สำหรับ `cond` ให้ใช้ `true` ไว้เป็นเงื่อนไขสุดท้ายในกรณีที่ไม่มีการเข้าเงื่อนไขไหนอะไรก่อนหน้านี้เลย
   <sup>[[link](#true-as-last-condition)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   cond do
     1 + 2 == 5 ->
       "Nope"
@@ -560,7 +558,7 @@ generally preferred practice.
       "OK"
   end
 
-  # preferred
+  # แนะนำ
   cond do
     1 + 2 == 5 ->
       "Nope"
@@ -574,40 +572,36 @@ generally preferred practice.
   ```
 
 * <a name="parentheses-and-functions-with-zero-arity"></a>
-  Use parentheses for calls to functions with zero arity, so they can be
-  distinguished from variables.
-  Starting in Elixir 1.4, the compiler will warn you about
-  locations where this ambiguity exists.
+
+  ใช้วงเล็บเมื่อเรียกฟังก์ชันที่ไม่รับตัวแปร เพื่อให้แยกแยะจากตัวแปรได้ง่ายขึ้น เพราะตั้งแต่ Elixir 1.4 เป็นต้นไป compiler จะเตือนคุณเกี่ยวกับปัญหาไม่ชัดเจนนี้
   <sup>[[link](#parentheses-and-functions-with-zero-arity)]</sup>
 
   ```elixir
   defp do_stuff, do: ...
 
-  # not preferred
+  #  ไม่แนะนำ
   def my_func do
-    # is this a variable or a function call?
+    # ไม่รู้ว่าเป็นฟังก์ชันหรือตัวแปรกันแน่
     do_stuff
   end
 
-  # preferred
+  # แนะนำ
   def my_func do
-    # this is clearly a function call
+    # เห็นได้ชัดว่านี้เป็นฟังก์ชัน
     do_stuff()
   end
   ```
 
-### Naming
+<h3 id="naming">การตั้งชื่อ (Naming)</h3>
 
-This guide follows the [Naming Conventions] from the Elixir docs,
-including the use of `snake_case` and `CamelCase` to describe the casing
-rules.
+คู่มือนี้ถูกอ้างอิงมาจาก document ของ Elixir [Naming Conventions] ซึ่งรวมถึงการใช้ `snake_case` และ `CamelCase` เพื่ออธิบายหลักการในการตั้งชื่อ
 
 * <a name="snake-case"></a>
-  Use `snake_case` for atoms, functions and variables.
+  ใช้ snake_case สำหรับ atoms, ฟังก์ชัน, และตัวแปร
   <sup>[[link](#snake-case)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   :"some atom"
   :SomeAtom
   :someAtom
@@ -618,7 +612,7 @@ rules.
     ...
   end
 
-  # preferred
+  # แนะนำ
   :some_atom
 
   some_var = 5
@@ -629,11 +623,11 @@ rules.
   ```
 
 * <a name="camel-case"></a>
-  Use `CamelCase` for modules (keep acronyms like HTTP, RFC, XML uppercase).
+  ใช้ CamelCase สำหรับ modules (พวกตัวย่อเช่น HTTP, RFC, XML ให้ใช้เป็นตัวพิมพ์ใหญ่).
   <sup>[[link](#camel-case)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   defmodule Somemodule do
     ...
   end
@@ -646,7 +640,7 @@ rules.
     ...
   end
 
-  # preferred
+  # แนะนำ
   defmodule SomeModule do
     ...
   end
@@ -657,8 +651,7 @@ rules.
   ```
 
 * <a name="predicate-function-trailing-question-mark"></a>
-  Functions that return a boolean (`true` or `false`) should be named
-  with a trailing question mark.
+  ฟังก์ชันที่คืนค่า boolean (`true` หรือ `false`) ควรตั้งชื่อโดยการนำเอาเครื่องหมายคำถามมาไว้ท้ายสุด
   <sup>[[link](#predicate-function-trailing-question-mark)]</sup>
 
   ```elixir
@@ -668,9 +661,7 @@ rules.
   ```
 
 * <a name="predicate-function-is-prefix"></a>
-  Boolean checks that can be used in guard clauses should be named with
-  an `is_` prefix.
-  For a list of allowed expressions, see the [Guard][Guard Expressions] docs.
+  Boolean checks ที่ใช้ใน guard clauses ควรตั้งชื่อโดยใช้คำนำหน้าเป็น `is_` สำหรับ expressions ที่ใช้ได้ สามารถดูที่ [Guard][Guard Expressions]
   <sup>[[link](#predicate-function-is-prefix)]</sup>
 
   ```elixir
@@ -679,10 +670,9 @@ rules.
   ```
 
 * <a name="private-functions-with-same-name-as-public"></a>
-  Private functions should not have the same name as public functions.
-  Also, the `def name` and `defp do_name` pattern is discouraged.
+  ฟังก์ชันที่เป็น private ไม่ควรใช้ชื่อเดียวกับฟังก์ชันที่เป็น public นอกจากนี้ รูปแบบ `def name` และ `defp do_name` ก็ไม่แนะนำให้ใช้
 
-  Usually one can try to find more descriptive names focusing on the differences.
+  โดยทั่วไป ชื่อฟังก์ชันควรที่จะระบุจุดประสงค์ของฟังก์ชันได้อย่างชัดเจน
   <sup>[[link](#private-functions-with-same-name-as-public)]</sup>
 
   ```elixir
@@ -693,41 +683,37 @@ rules.
   defp sum_total([head | tail], total), do: sum_total(tail, head + total)
   ```
 
-### Comments
+<h3 id="comments">การใส่คอมเมนต์ (Comments)</h3>
 
 * <a name="expressive-code"></a>
-  Write expressive code and try to convey your program's intention through
-  control-flow, structure and naming.
+  เขียนโค้ดโดยที่ให้ผู้อ่านรู้ว่าโปรแกรมกำลังทำอะไรและพยายามสื่อความตั้งใจของโปรแกรมของคุณผ่าน control-flow, structure และ naming
   <sup>[[link](#expressive-code)]</sup>
 
 * <a name="comment-grammar"></a>
-  Comments longer than a word are capitalized, and sentences use punctuation.
-  Use [one space][Sentence Spacing] after periods.
+  คอมเมนต์ที่ยาวกว่าหนึ่งคำจะเขียนด้วยตัวพิมพ์ใหญ่ ส่วนประโยคจะใช้เครื่องหมายวรรคตอน ใช้ [one space][Sentence Spacing] หลังจาก periods
   <sup>[[link](#comment-grammar)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   # these lowercase comments are missing punctuation
 
-  # preferred
+  # แนะนำ
   # Capitalization example
   # Use punctuation for complete sentences.
   ```
 
 * <a name="comment-line-length"></a>
-  Limit comment lines to 100 characters.
+  จำกัดไม่ให้เกิน 100 ตัวอักษร ในคอมเมนต์หนึ่งบรรทัด
   <sup>[[link](#comment-line-length)]</sup>
 
-#### Comment Annotations
+<h4 id="comment-annotations">การใส่คำอธิบายประกอบ (Comments Annotations)</h4>
 
 * <a name="annotations"></a>
-  Annotations should usually be written on the line immediately above the
-  relevant code.
+  คำอธิบายประกอบควรเขียนบนบรรทัดทันทีเหนือ code ที่เกี่ยวข้อง
   <sup>[[link](#annotations)]</sup>
 
 * <a name="annotation-keyword"></a>
-  The annotation keyword is uppercase, and is followed by a colon and a space,
-  then a note describing the problem.
+  คีย์เวิร์ดของคำอธิบายประกอบจะเขียนด้วยตัวพิมพ์ใหญ่ จากนั้นให้ตามด้วย colon และเว้น space จากนั้นเขียนค่อยคำอธิบาย
   <sup>[[link](#annotation-keyword)]</sup>
 
   ```elixir
@@ -736,9 +722,8 @@ rules.
   ```
 
 * <a name="exceptions-to-annotations"></a>
-  In cases where the problem is so obvious that any documentation would be
-  redundant, annotations may be left with no note.
-  This usage should be the exception and not the rule.
+  ในกรณีที่ปัญหาค่อนข้างจะชัดเจนมาก ให้ใส่คีย์เวิร์ดของคำอธิบายประกอบอย่างเดียว
+  การใช้วิธีนี้ควรเป็นข้อยกเว้นแตไม่ใช่เป็นกฏ
   <sup>[[link](#exceptions-to-annotations)]</sup>
 
   ```elixir
@@ -749,55 +734,50 @@ rules.
   ```
 
 * <a name="todo-notes"></a>
-  Use `TODO` to note missing features or functionality that should be added at a
-  later date.
+
+  ใช้ `TODO` เพื่อบอกว่ามีฟีเจอร์หรือฟังก์ชันที่หายไปซึ่งควรเพิ่มเข้ามาในภายหลัง
   <sup>[[link](#todo-notes)]</sup>
 
 * <a name="fixme-notes"></a>
-  Use `FIXME` to note broken code that needs to be fixed.
+  ใช้ `FIXME` เพื่อบอกว่าโค้ดที่มีปัญหาและต้องแก้ไข
   <sup>[[link](#fixme-notes)]</sup>
 
 * <a name="optimize-notes"></a>
-  Use `OPTIMIZE` to note slow or inefficient code that may cause performance
-  problems.
+  ใช้ `OPTIMIZE` เพื่อบอกว่าโค้ดทำงานช้าหรือมีประสิทธิภาพที่ไม่เพียงพอซึ่งอาจทำให้เกิดปัญหาได้
   <sup>[[link](#optimize-notes)]</sup>
 
 * <a name="hack-notes"></a>
-  Use `HACK` to note code smells where questionable coding practices were used
-  and should be refactored away.
+  ใช้ `HACK` เพื่อบอกว่าโค้ดในส่วนมีความผิดปกติด้วยวิธีการเขียนโค้ดที่ดูน่าสงสัยและควรจะปรับปรุงใหม่
   <sup>[[link](#hack-notes)]</sup>
 
 * <a name="review-notes"></a>
-  Use `REVIEW` to note anything that should be looked at to confirm it is
-  working as intended.
-  For example: `REVIEW: Are we sure this is how the client does X currently?`
+  ใช้ `REVIEW` เพื่อบอกว่าควรตรวจสอบเพื่อยืนยันว่ามันทำงานตามที่ตั้งใจไว้หรือไม่
+  ตัวอย่างเช่น: `REVIEW: แน่ใจแล้วหรือไม่ ว่าผู้ใช้งานใช้ฟังค์ชั่นนี้ได้อย่างถูกต้อง?`
   <sup>[[link](#review-notes)]</sup>
 
 * <a name="custom-keywords"></a>
-  Use other custom annotation keywords if it feels appropriate, but be sure to
-  document them in your project's `README` or similar.
+  ใช้คีย์เวิร์ดของคำอธิบายประกอบอื่นๆ ตามความเหมาะสม แต่ต้องแน่ใจว่าได้มีการแจ้งไว้ใน `README` ของโปรเจกต์หรือเอกสารอื่นที่คล้ายคลึงกันแล้ว
   <sup>[[link](#custom-keywords)]</sup>
 
-### Modules
+<h3 id="modules">โมดูล (Modules)</h3>
 
 * <a name="one-module-per-file"></a>
-  Use one module per file unless the module is only used internally by another
-  module (such as a test).
+  ใช้หนึ่ง module ต่อหนึ่งไฟล์ ยกเว้นในกรณีที่ module นั้นใช้ภายในโดย module อื่นเท่านั้น (เช่นการ testing)
   <sup>[[link](#one-module-per-file)]</sup>
 
 * <a name="underscored-filenames"></a>
-  Use `snake_case` file names for `CamelCase` module names.
+  ใช้ `snake_case` สำหรับชื่อไฟล์ และ `CamelCase` สำหรับชื่อของ module
   <sup>[[link](#underscored-filenames)]</sup>
 
   ```elixir
-  # file is called some_module.ex
+  # ชื่อไฟล์จะเป็น some_module.ex
 
   defmodule SomeModule do
   end
   ```
 
 * <a name="module-name-nesting"></a>
-  Represent each level of nesting within a module name as a directory.
+  ในชื่อของ module ให้แสดงแต่ละเลเวลของ directory
   <sup>[[link](#module-name-nesting)]</sup>
 
   ```elixir
@@ -808,26 +788,27 @@ rules.
   ```
 
 * <a name="module-attribute-ordering"></a>
-  List module attributes, directives, and macros in the following order:
+  ให้เรียง module attributes, directives, และ macros ตามลำดับนี้
   <sup>[[link](#module-attribute-ordering)]</sup>
 
   1. `@moduledoc`
-  1. `@behaviour`
-  1. `use`
-  1. `import`
-  1. `require`
-  1. `alias`
-  1. `@module_attribute`
-  1. `defstruct`
-  1. `@type`
-  1. `@callback`
-  1. `@macrocallback`
-  1. `@optional_callbacks`
-  1. `defmacro`, `defmodule`, `defguard`, `def`, etc.
+  2. `@behaviour`
+  3. `use`
+  4. `import`
+  5. `require`
+  6. `alias`
+  7. `@module_attribute`
+  8. `defstruct`
+  9. `@type`
+  10. `@callback`
+  11. `@macrocallback`
+  12. `@optional_callbacks`
+  13. `defmacro`, `defmodule`, `defguard`, `def`, etc.
 
-  Add a blank line between each grouping, and sort the terms (like module names)
-  alphabetically.
-  Here's an overall example of how you should order things in your modules:
+
+  ให้เพิ่มบรรทัดว่างในแต่ละกลุ่ม และจัดเรียง (เช่น ชื่อ module) ตามตัวอักษร
+  
+  นี่คือตัวอย่างโดยรวมของวิธีการจัดเรียงสิ่งต่างๆ ใน modules ของคุณ:
 
   ```elixir
   defmodule MyModule do
@@ -871,13 +852,15 @@ rules.
     @impl true
     def init(state), do: {:ok, state}
 
-    # Define other functions here.
+    # จากนั้นค่อยใส่ฟังค์ชั่นอื่นๆ
   end
   ```
 
 * <a name="module-pseudo-variable"></a>
   Use the `__MODULE__` pseudo variable when a module refers to itself. This
   avoids having to update any self-references when the module name changes.
+
+  ใช้ `__MODULE__` เมื่อต้องการให้ module อ้างอิงถึงตัวของมันเอง การทำแบบนี้จะช่วยหลีกเลี่ยงเวลาที่เราเปลี่ยนชื่อ module จะได้ไม่ต้องอัปเดตทุกครั้ง
   <sup>[[link](#module-pseudo-variable)]</sup>
 
   ```elixir
@@ -889,7 +872,7 @@ rules.
   ```
 
 * <a name="alias-self-referencing-modules"></a>
-  If you want a prettier name for a module self-reference, set up an alias.
+  สามารถใช้ alias สำหรับ `__MODULE__` เพื่อให้ชื่อมีความสวยงามมากขึ้น
   <sup>[[link](#alias-self-referencing-modules)]</sup>
 
   ```elixir
@@ -903,35 +886,32 @@ rules.
   ```
 
 * <a name="repetitive-module-names"></a>
-  Avoid repeating fragments in module names and namespaces.
-  This improves overall readability and
-  eliminates [ambiguous aliases][Conflicting Aliases].
+  หลีกเลี่ยงการใช้ชื่อที่ซ้ำซ้อนของใน module และ namespaces สิ่งนี้ช่วยเพิ่มความชัดเจนโดยรวมและขจัด [ambiguous aliases][Conflicting Aliases].
   <sup>[[link](#repetitive-module-names)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   defmodule Todo.Todo do
     ...
   end
 
-  # preferred
+  # แนะนำ
   defmodule Todo.Item do
     ...
   end
   ```
+	
+<h3 id="documentation">การเขียนเอกสารกำกับโปรแกรม (Documentation)</h3>
 
-### Documentation
-
-Documentation in Elixir (when read either in `iex` with `h` or generated with
-[ExDoc]) uses the [Module Attributes] `@moduledoc` and `@doc`.
+Elixir จะใช้ [Module Attributes] `@moduledoc` and `@doc`ในการเขียน document (ไม่ว่าจะอ่านจาก `h` (help function) ใน `iex`  หรือที่ถูกเขียนบน
+[ExDoc]) 
 
 * <a name="moduledocs"></a>
-  Always include a `@moduledoc` attribute in the line right after `defmodule` in
-  your module.
+  ต้องใส่ `@moduledoc` ในบรรทัดที่ต่อจาก `defmodule` เสมอ
   <sup>[[link](#moduledocs)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
 
   defmodule AnotherModule do
     use SomeModule
@@ -942,7 +922,7 @@ Documentation in Elixir (when read either in `iex` with `h` or generated with
     ...
   end
 
-  # preferred
+  # แนะนำ
 
   defmodule AThirdModule do
     @moduledoc """
@@ -955,7 +935,7 @@ Documentation in Elixir (when read either in `iex` with `h` or generated with
   ```
 
 * <a name="moduledoc-false"></a>
-  Use `@moduledoc false` if you do not intend on documenting the module.
+  ใส่ `@moduledoc false` เมื่อไม่ต้องการที่จะเขียน document ในโมดูลนั้นๆ
   <sup>[[link](#moduledoc-false)]</sup>
 
   ```elixir
@@ -966,11 +946,11 @@ Documentation in Elixir (when read either in `iex` with `h` or generated with
   ```
 
 * <a name="moduledoc-spacing"></a>
-  Separate code after the `@moduledoc` with a blank line.
+  เว้นหนึ่งบรรทัด เพื่อแยกโค้ดกับ `@moduledoc`
   <sup>[[link](#moduledoc-spacing)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   defmodule SomeModule do
     @moduledoc """
     About the module
@@ -978,7 +958,7 @@ Documentation in Elixir (when read either in `iex` with `h` or generated with
     use AnotherModule
   end
 
-  # preferred
+  # แนะนำ
   defmodule SomeModule do
     @moduledoc """
     About the module
@@ -989,11 +969,11 @@ Documentation in Elixir (when read either in `iex` with `h` or generated with
   ```
 
 * <a name="heredocs"></a>
-  Use heredocs with markdown for documentation.
+  ใช้ heredocs ควบคู่กับ markdown เพื่อเขียน document.
   <sup>[[link](#heredocs)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   defmodule SomeModule do
     @moduledoc "About the module"
   end
@@ -1008,7 +988,7 @@ Documentation in Elixir (when read either in `iex` with `h` or generated with
     """
   end
 
-  # preferred
+  # แนะนำ
   defmodule SomeModule do
     @moduledoc """
     About the module
@@ -1021,17 +1001,15 @@ Documentation in Elixir (when read either in `iex` with `h` or generated with
   end
   ```
 
-### Typespecs
+<h3 id="typespecs">การเขียนไทป์สเปค (Typespecs)</h3>
 
-Typespecs are notation for declaring types and specifications, for
-documentation or for the static analysis tool Dialyzer.
+Typespecs เป็นรูปแบบที่เอาไว้สำหรับประกาศหรือระบุ types and specifications ทั้งสำหรับ documentation และเครื่องมือวิเคราะห์แบบสแตติกอย่าง Dialyzer
 
-Custom types should be defined at the top of the module with the other
-directives (see [Modules](#modules)).
+Custom types ควรถูกกำหนดไว้ในด้านบนของ module ร่วมกับ
+directives อื่นๆ (ดูได้ที่ [Modules](#modules)).
 
 * <a name="typedocs"></a>
-  Place `@typedoc` and `@type` definitions together, and separate each
-  pair with a blank line.
+  วาง `@typedoc` ไว้ใกล้ๆกันกับ `@type` และแยกกันโดยใช้การเว้นบรรทัด
   <sup>[[link](#typedocs)]</sup>
 
   ```elixir
@@ -1049,16 +1027,15 @@ directives (see [Modules](#modules)).
   ```
 
 * <a name="union-types"></a>
-  If a union type is too long to fit on a single line, put each part of the
-  type on a separate line, indented one level past the name of the type.
+  หาก union type ยาวเกินกว่าจะอยู่ในบรรทัดเดียว ให้วางแต่ละส่วนของ type บนบรรทัดแยกต่างหาก โดยเยื้องออกไปหนึ่งระดับจากชื่อของ type
   <sup>[[link](#union-types)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   @type long_union_type ::
           some_type | another_type | some_other_type | one_more_type | a_final_type
 
-  # preferred
+  # แนะนำ
   @type long_union_type ::
           some_type
           | another_type
@@ -1068,8 +1045,8 @@ directives (see [Modules](#modules)).
   ```
 
 * <a name="naming-main-types"></a>
-  Name the main type for a module `t`, for example: the type specification for a
-  struct.
+
+  ตั้งชื่อ type หลักสำหรับ module ว่า `t` เช่น: type specification สำหรับ struct
   <sup>[[link](#naming-main-types)]</sup>
 
   ```elixir
@@ -1082,9 +1059,7 @@ directives (see [Modules](#modules)).
   ```
 
 * <a name="spec-spacing"></a>
-  Place specifications right before the function definition,
-  after the `@doc`,
-  without separating them by a blank line.
+  วาง specifications ไว้ในบรรทัดด้านบนของฟังค์ชั่น หลังจาก @doc โดยที่ไม่แยกด้วยบรรทัดว่าง
   <sup>[[link](#spec-spacing)]</sup>
 
   ```elixir
@@ -1097,39 +1072,37 @@ directives (see [Modules](#modules)).
   end
   ```
 
-### Structs
+<h3 id="structs">สตรัค (Structs)</h3>
 
 * <a name="nil-struct-field-defaults"></a>
-  Use a list of atoms for struct fields that default to `nil`, followed by the
-  other keywords.
+  ใช้ atoms แทนสำหรับฟิลด์ของ struct ที่มีค่าเริ่มต้นเป็น nil จากนั้นตามด้วยคำหลักอื่นๆ
   <sup>[[link](#nil-struct-field-defaults)]</sup>
 
   ```elixir
-  # not preferred
+  # 
   defstruct name: nil, params: nil, active: true
 
-  # preferred
+  # แนะนำ
   defstruct [:name, :params, active: true]
   ```
 
 * <a name="struct-def-brackets"></a>
-  Omit square brackets when the argument of a `defstruct` is a keyword list.
+  ไม่ต้องใส่วงเล็บเมื่อ argument ของ `defstruct` เป็น keyword list
   <sup>[[link](#struct-def-brackets)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   defstruct [params: [], active: true]
 
-  # preferred
+  # แนะนำ
   defstruct params: [], active: true
 
-  # required - brackets are not optional, with at least one atom in the list
+  # จำเป็นต้องใส่วงเล็บ ถ้าหากมี atom อยู่ใน list
   defstruct [:name, params: [], active: true]
   ```
 
 * <a name="multiline-structs"></a>
-  If a struct definition spans multiple lines, put each element on its own line,
-  keeping the elements aligned.
+  เมื่อต้องสร้าง struct ที่มีหลายบรรทัด ควรใส่ element ไว้เพียงตัวเดียวต่อหนึ่งบรรทัด และจัดเรียงให้อยู่ในแนวเดียวกัน
   <sup>[[link](#multiline-structs)]</sup>
 
   ```elixir
@@ -1140,7 +1113,7 @@ directives (see [Modules](#modules)).
             quux: 1
   ```
 
-  If a multiline struct requires brackets, format it as a multiline list:
+  ถ้าหากต้องใส่วงเล็บควรจัดรูปแบบตามนี้
 
   ```elixir
   defstruct [
@@ -1150,14 +1123,15 @@ directives (see [Modules](#modules)).
   ]
   ```
 
-### Exceptions
+
+<h3 id="exceptions">การจัดการกับข้อผิดพลาด (Exceptions)</h3>
 
 * <a name="exception-names"></a>
-  Make exception names end with a trailing `Error`.
+  เวลาตั้งชื่อ exception ให้ต่อท้ายด้วย `Error`
   <sup>[[link](#exception-names)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   defmodule BadHTTPCode do
     defexception [:message]
   end
@@ -1166,161 +1140,152 @@ directives (see [Modules](#modules)).
     defexception [:message]
   end
 
-  # preferred
+  # แนะนำ
   defmodule BadHTTPCodeError do
     defexception [:message]
   end
   ```
 
 * <a name="lowercase-error-messages"></a>
-  Use lowercase error messages when raising exceptions, with no trailing
-  punctuation.
+
+  ให้ใช้ตัวอักษรเล็กสำหรับข้อความ error โดยที่ไม่ต้องใส่เครื่องหมายวรรคตอน
   <sup>[[link](#lowercase-error-messages)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   raise ArgumentError, "This is not valid."
 
-  # preferred
+  # แนะนำ
   raise ArgumentError, "this is not valid"
   ```
 
-### Collections
+<h3 id="collections">คอลเลกชัน (Collections)</h3>
 
 * <a name="keyword-list-syntax"></a>
-  Always use the special syntax for keyword lists.
+  ต้องใช้ syntax พิเศษสำหรับ keyword lists เสมอ
   <sup>[[link](#keyword-list-syntax)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   some_value = [{:a, "baz"}, {:b, "qux"}]
 
-  # preferred
+  # แนะนำ
   some_value = [a: "baz", b: "qux"]
   ```
 
 * <a name="map-key-atom"></a>
-  Use the shorthand key-value syntax for maps when all of the keys are atoms.
+  เมื่อทุก key ใน map เป็น atom ทั้งหมด ให้ใช้ syntax เป็นแบบ shorthand key-value
   <sup>[[link](#map-key-atom)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   %{:a => 1, :b => 2, :c => 0}
 
-  # preferred
+  # แนะนำ
   %{a: 1, b: 2, c: 3}
   ```
 
 * <a name="map-key-arrow"></a>
-  Use the verbose key-value syntax for maps if any key is not an atom.
+  ถ้าหากมี key ใดที่ไม่ใช่ atom เพียง key เดียวใน map ให้ใช้ syntax แบบ verbose key-value 
   <sup>[[link](#map-key-arrow)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   %{"c" => 0, a: 1, b: 2}
 
-  # preferred
+  # แนะนำ
   %{:a => 1, :b => 2, "c" => 0}
   ```
 
-### Strings
+<h3 id="strings">สตริง (Strings)</h3>
 
 * <a name="strings-matching-with-concatenator"></a>
-  Match strings using the string concatenator rather than binary patterns:
+  เมื่อต้องการที่จะเทียบ string ให้ใช้ string concatenator มากกว่า binary patterns
   <sup>[[link](#strings-matching-with-concatenator)]</sup>
 
   ```elixir
-  # not preferred
+  # ไม่แนะนำ
   <<"my"::utf8, _rest::bytes>> = "my string"
 
-  # preferred
+  # แนะนำ
   "my" <> _rest = "my string"
   ```
 
-### Regular Expressions
-
-_No guidelines for regular expressions have been added yet._
+<h3 id="strings">นิพจน์ปรกติ (Regular Expressions)</h3>
+ 
+_ยังไม่มีคู่มือสำหรับนิพจน์ปรกติ (Regular Expressions) ในตอนนี้_
 
 ### Metaprogramming
 
+<h3 id="metaprogramming">เมต้าโปรแกรมมิ่ง (Metaprogramming)</h3>
+
 * <a name="avoid-metaprogramming"></a>
-  Avoid needless metaprogramming.
+  หลีกเลี่ยงการใช้ metaprogramming ที่ไม่จำเป็น
   <sup>[[link](#avoid-metaprogramming)]</sup>
 
 ### Testing
+<h3 id="testing">การทดสอบโปรแกรม (testing)</h3>
 
 * <a name="testing-assert-order"></a>
-  When writing [ExUnit] assertions, put the expression being tested to the left
-  of the operator, and the expected result to the right, unless the assertion is
-  a pattern match.
+
+  เมื่อเขียน [ExUnit] assertions, ให้วาง expression ที่กำลังทดสอบไว้ทางซ้ายของ operator และวาง expected result ไว้ทางขวา ยกเว้นในกรณีที่ assertion เป็น pattern match
   <sup>[[link](#testing-assert-order)]</sup>
 
   ```elixir
-  # preferred
+  # แนะนำ
   assert actual_function(1) == true
 
-  # not preferred
+  # ไม่แนะนำ
   assert true == actual_function(1)
 
-  # required - the assertion is a pattern match
+  # pattern match ต้องวางทางด้านซ้ายเสมอ
   assert {:ok, expected} = actual_function(3)
   ```
 
-## Resources
+<h2 id="resources">แหล่งที่มา (Resources)</h2>
 
-### Alternative Style Guides
+<h3 id="alternative-style-guides">คู่มืออื่นๆ (Alternative Style Guides)</h3>
 
 * [Aleksei Magusev's Elixir Style Guide](https://github.com/lexmag/elixir-style-guide#readme)
-  — An opinionated Elixir style guide stemming from the coding style practiced
-  in the Elixir core libraries.
-  Developed by [Aleksei Magusev](https://github.com/lexmag) and
-  [Andrea Leopardi](https://github.com/whatyouhide), members of Elixir core team.
-  While the Elixir project doesn't adhere to any specific style guide,
-  this is the closest available guide to its conventions.
+  — คู่มือ Elixir ที่มีความเฉพาะเจาะจง ซึ่งได้รับการพัฒนาตามแบบแผนของการเขียนโค้ดที่ใช้ใน Elixir core libraries
+  พัฒนาโดย [Aleksei Magusev](https://github.com/lexmag) และ
+  [Andrea Leopardi](https://github.com/whatyouhide), สมาชิกหลักของทีม Elixir
+
+  แม้ว่าโปรเจกต์ Elixir จะไม่ยึดติดกับคู่มือรูปแบบการเขียนโค้ดใดๆ แต่นี่คือคู่มือที่ใกล้เคียงที่สุดกับแบบแผนที่ใช้ในโปรเจกต์ต่างๆ
 
 * [Credo's Elixir Style Guide](https://github.com/rrrene/elixir-style-guide#readme)
-  — Style Guide for the Elixir language, implemented by
-  [Credo](http://credo-ci.org) static code analysis tool.
+  — คู่มือสำหรับภาษา Elixir  เขียนโดย
+  [Credo](http://credo-ci.org)
 
-### Tools
+<h3 id="tools">เครื่องมือ (Tools)</h3>
 
-Refer to [Awesome Elixir][Code Analysis] for libraries and tools that can help
-with code analysis and style linting.
+สำหรับ libraries และ tools ที่สามารถช่วยในการวิเคราะห์โค้ดและ style linting สามารถดูได้ที่ [Awesome Elixir][Code Analysis]
 
-## Getting Involved
+<h2 id="getting-involved">เข้ามามีส่วนร่วมกับเรา</h2>
 
-### Contributing
+<h3 id="contributing">การสนับสนุน (Contributing)</h3>
 
-It's our hope that this will become a central hub for community discussion on
-best practices in Elixir.
-Feel free to open tickets or send pull requests with improvements.
-Thanks in advance for your help!
+เราหวังว่าสิ่งนี้จะกลายเป็นศูนย์กลางสำหรับ community ที่พูดคุยเกี่ยวกับ best practice ต่างๆ ใน Elixir อย่าลังเลที่จะเปิด tickets หรือส่ง pull requests เพื่อให้ข้อเสนอแนะ ขอบคุณล่วงหน้าสำหรับความช่วยเหลือของคุณ!
 
-Check the [contributing guidelines][Contributing] for more information.
+ข้อมูลเพิ่มเติมสามารถดูได้ใน [contributing guidelines][Contributing] 
 
-### Spread the Word
+<h3 id="spread-the-word">เผยแพร่ข่าวสาร (Spread the Word)</h3>
 
-A community style guide is meaningless without the community's support. Please
-tweet, [star][Stargazers], and let any Elixir programmer know
-about [this guide][Elixir Style Guide] so they can contribute.
+Community นี้จะไม่มีความหมายหากไม่ได้รับการสนับสนุนจากเพื่อนๆใน community ด้วยการ tweet, ให้ดาว [star][Stargazers] และแจ้งให้ Elixir developer ทุกคนทราบเกี่ยวกับ [คู่มือนี้][Elixir Style Guide] เพื่อให้พวกเขาสามารถมีส่วนร่วมได้
 
-## Copying
+<h2 id="copying">การก๊อปปี้ (Copying)</h2>
 
-### License
+<h3 id="license">ลิขสิทธิ์ (License)</h3>
 
 ![Creative Commons License](http://i.creativecommons.org/l/by/3.0/88x31.png)
-This work is licensed under a
+Repo นี้ได้รับการอนุญาตภายใต้
 [Creative Commons Attribution 3.0 Unported License][License]
 
-### Attribution
+<h3 id="attribution">การยกเครดิต (Attribution)</h3>
 
-The structure of this guide, bits of example code, and many of the initial
-points made in this document were borrowed from the [Ruby community style guide].
-A lot of things were applicable to Elixir and allowed us to get _some_ document
-out quicker to start the conversation.
+โครงสร้าง โค้ดตัวอย่าง และหลายประเด็นที่กล่าวในคู่มือนี้ นี้ได้ยืมมาจาก [Ruby community style guide] มีหลายอย่างที่สามารถใช้ใน Elixir ได้ และช่วยให้พวกเราสามารถสร้างเอกสารบางส่วนได้เร็วขึ้น
 
-Here's the [list of people who have kindly contributed][Contributors] to this
-project.
+[list ของผู้คนที่มีส่วนร่วมในนี้][Contributors]
 
 <!-- Links -->
 [Chinese Simplified]: https://github.com/geekerzp/elixir_style_guide/blob/master/README-zhCN.md
